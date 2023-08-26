@@ -1,0 +1,273 @@
+:root {
+    /* Brand-color */
+    --color-primary: #9bf00b;
+
+    /* Dark-scale */
+    --dark-10: #0c0c0c;
+    --dark-20: #777777;
+    --dark-30: #c0c0c0;
+    --dark-40: #fff;
+
+    /* Fonts */
+    --font-primary: 'Inter', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--font-primary);
+}
+
+body {
+    background-color: var(--dark-10);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 60px 0 150px 0;
+    margin: 0 auto;
+    /* background-color: rebeccapurple; */
+    
+    width: min(90%, 1400px);
+    color: var(--dark-40);
+}
+
+.navbar {
+    padding-left: 80px;
+}
+
+.navbar a {
+    padding: 20px;
+
+    color: var(--dark-40);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.header button {
+    background-color: var(--color-primary);
+
+    width: 224px;
+    height: 60px;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.principal {
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 0 auto;
+    background-image: url(../images/luz-verde.png);
+    background-position: calc(-200px);
+
+    width: min(90%, 1400px);
+}
+
+.principal .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.principal h1 {
+    color: var(--dark-40);
+    font-size: 72px;
+    font-weight: 600;
+}
+
+.principal h2 {
+    color: var(--color-primary);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.principal::before {
+    content: '';
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, var(--dark-10), transparent 60%);
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+}
+
+/* Section Promote */
+
+.promote {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    height: 100vh;
+    width: min(90%, 1400px);
+}
+
+.promote .text {
+    width: min(90%, 600px);
+    color: var(--dark-40);
+}
+
+.promote .text h1 {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.promote .text h1 span {
+    color: var(--color-primary);
+}
+
+.promote .text p {
+    margin-top: 60px;
+    
+    color: var(--dark-30);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* Section Games */
+
+.games {
+    display: flex;
+
+    width: 98vw;
+    margin: 0 auto;
+}
+
+.games .wrapper-img {
+    position: relative;
+    
+    height: 90vh;
+    width: 100%;
+}
+
+.games img {
+    width: 100%;
+}
+
+.wrapper-img::after {
+    /* content: url(../images/games/farcry-name.svg); */
+    bottom: 0;
+    left: 0;
+    height: 15%;    
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+}
+.wrapper-img.farcry::after {
+    content: url(../images/games/farcry-name.svg);
+}
+.wrapper-img.horizon::after {
+    content: url(../images/games/horizon-name.svg);
+}
+.wrapper-img.fifa::after {
+    content: url(../images/games/fifa-name.svg);
+}
+.wrapper-img.minecraft::after {
+    content: url(../images/games/minecraft-name.svg);
+}
+
+.wrapper-img::before {
+    content: '';
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, var(--dark-10), transparent 30%);
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+}
+
+/* Section Questions */
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+
+    margin: 0 auto;
+    
+    height: 100vh;
+    width: min(90%, 1400px);
+
+    color: var(--dark-40);
+}
+
+.questions h2 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.questions h2 span {
+    color: var(--color-primary);
+}
+
+.questions .accordion-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 140px;
+    border-bottom: 1px solid var(--dark-20);
+}
+
+.questions .accordion h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    height: 200px;
+    width: min(90%, 1400px);
+}
+
+.footer img {
+    width: 200px;
+}
+
+.footer .suit {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    
+    color: var(--dark-20);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Media Queries */
+
+@media screen and (width: 600px) {
+    .header {
+        flex-direction: column;
+    }
+}
+
