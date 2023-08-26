@@ -146,6 +146,9 @@ body {
 .games {
     display: flex;
 
+    padding-top: 70px;
+
+    height: 130vh;
     width: 98vw;
     margin: 0 auto;
 }
@@ -263,11 +266,5 @@ body {
     font-weight: 400;
 }
 
-/* Media Queries */
 
-@media screen and (width: 600px) {
-    .header {
-        flex-direction: column;
-    }
-}
 
